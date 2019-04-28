@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(26, 26, 71);
+    }
+    .color{
+        background-color: rgb(151, 46, 165);
+    }
+    .box_rotate{
+        transform: rotate(45deg);         
+    }
+    
+
+    </style>
+</head>
+<body>
+    <div id="box" class="box" ></div>
+    <button id="btn1" class="btn">color!</button>
+    <button id="btn2" class="btn">Remove color!</button>
+    <button id="btn3" class="btn">Rotate!</button>
+    <button id="btn4" class="btn">Remove rotate!</button>
+</body>
+<script>
+
+let get_box = document.getElementById('box');
+
+let get_btn1= document.getElementById('btn1');
+let get_btn2= document.getElementById('btn2');
+let get_btn3= document.getElementById('btn3');
+let get_btn4= document.getElementById('btn4');
+
+get_btn1.addEventListener('click', function(){
+    get_box.classList.add('color');
+});
+get_btn2.addEventListener('click', function(){
+    get_box.classList.remove('color');
+});
+
+get_btn3.addEventListener('click', function(){
+    get_box.classList.add('box_rotate');
+});
+get_btn4.addEventListener('click', function(){
+    get_box.classList.remove('box_rotate');
+});
+
+
+
+
+</script>
+
+</html>
